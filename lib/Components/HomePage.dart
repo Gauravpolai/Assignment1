@@ -11,9 +11,11 @@ class HomePage extends StatelessWidget {
       child: ListView.builder(
           itemCount: data.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(data[index]["key"]),
-              subtitle: Text(data[index]["value"]),
+            return Card(
+              child: ListTile(
+                title: Text(data[index]["key"]),
+                subtitle: Text(data[index]["value"]),
+              ),
             );
           }),
     );
